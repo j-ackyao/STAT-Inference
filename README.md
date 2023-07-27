@@ -1,2 +1,1 @@
-# dsci-100-project_template
-Template project repository for STAT 201
+rendered project ipynb file as md will go here
