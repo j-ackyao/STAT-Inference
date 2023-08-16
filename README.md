@@ -1,7 +1,4 @@
-# STAT201 Group Project Report
 # Parents' Educational Attainment and Children's Intellectual Development
-
-*Jack Yao, Jessie Lu, Kexin Feng, Vincent Luong*
 
 ### Sections
 - #### [Introduction](#intro)
@@ -11,7 +8,6 @@
     - ##### [Theory-based approach](#theory)
 - #### [Discussion](#discuss)
 - #### [References](#refer)
-
 
 # Introduction <a id = 'intro'>
 Student Performance is a general term used to describe how well a student has mastered what is taught in school. In our experiment, we will use students' grades to quantify student performance and ultimately intellect. Although countless factors contribute to a student's academic performance, for simplicity we will assume performance on mathematics is representative of the student's performance; a study published in 2019 [(Mammarella et al., 2019)](#ref_2) explores the impact of parents' attitudes and behaviors towards math on their child's mathematic performance. There was evidence that parents majoring in elementary education tend to have higher math anxiety than those attending college. Another study [(Muhammad et al., 2020)](#ref_3) also suggests that the high education of father and mother positively contributes to their children's academic achievement. Our research is inspired by these findings, aiming to investigate the relationship between parental education and the child's mathematic performance.
@@ -68,17 +64,7 @@ cat("[Table 1] Unwrangled student data with relevant variables")
 head(student_data)
 ```
 
-    [1mRows: [22m[34m395[39m [1mColumns: [22m[34m33[39m
-    [36m──[39m [1mColumn specification[22m [36m────────────────────────────────────────────────────────[39m
-    [1mDelimiter:[22m ";"
-    [31mchr[39m (17): school, sex, address, famsize, Pstatus, Mjob, Fjob, reason, guardi...
-    [32mdbl[39m (16): age, Medu, Fedu, traveltime, studytime, failures, famrel, freetime...
-    
-    [36mℹ[39m Use `spec()` to retrieve the full column specification for this data.
-    [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-
-    [Table 1] Unwrangled student data with relevant variables
+	[Table 1] Unwrangled student data with relevant variables
 
 
 <table class="dataframe">
@@ -105,7 +91,7 @@ head(student_data)
 
 Seen from documentation of the dataset [(2014)](#ref_1), the mother's and father's education levels are as follows:
 
-[Table 2] Education Level Explanation
+	[Table 2] Education Level Explanation
 |Score|Education level|
 |-|-|
 |$0$|None|
@@ -150,13 +136,13 @@ father_education_plot
 
 
     
-![svg](output_9_0.svg)
+![svg](images/output_9_0.svg)
     
 
 
 
     
-![svg](output_9_1.svg)
+![svg](images/output_9_1.svg)
     
 
 
@@ -188,7 +174,7 @@ combined_education_plot
 
 
     
-![svg](output_11_0.svg)
+![svg](images/output_11_0.svg)
     
 
 
@@ -211,7 +197,7 @@ student_data_classified_edu |>
     summarize(n = n())
 ```
 
-    [Table 3] Count for Each Group
+	[Table 3] Count for Each Group
 
 
 <table class="dataframe">
@@ -257,7 +243,7 @@ student_grade_plots
 
 
     
-![svg](output_15_0.svg)
+![svg](images/output_15_0.svg)
     
 
 
@@ -274,7 +260,7 @@ student_data_classified_edu |>
     head(10)
 ```
 
-    [Table 4] Zero Final Grade Overview
+	[Table 4] Zero Final Grade Overview
 
 
 <table class="dataframe">
@@ -335,7 +321,7 @@ student_final_vs_average_grades_plot
 
 
     
-![svg](output_19_0.svg)
+![svg](images/output_19_0.svg)
     
 
 
@@ -399,11 +385,11 @@ null_model_boot |> visualize() +
 cat(paste("P-Value for bootstrap-based hypothesis test: ", get_p_value(null_model_boot, obs_stat, direction = "greater")))
 ```
 
-    P-Value for bootstrap-based hypothesis test:  0.0005
+	P-Value for bootstrap-based hypothesis test:  0.0005
 
 
     
-![svg](output_25_1.svg)
+![svg](images/output_25_1.svg)
     
 
 
@@ -464,7 +450,7 @@ ggplot(null_model_theory) +
 cat(paste("P-Value for theory-based hypothesis test: "), pull(tibble(p_value = pt(test_stat, df, lower.tail = F))))
 ```
 
-    [Table 5] Statistics of less-educated group
+	[Table 5] Statistics of less-educated group
 
 
 <table class="dataframe">
@@ -496,11 +482,11 @@ cat(paste("P-Value for theory-based hypothesis test: "), pull(tibble(p_value = p
 
 
 
-    P-Value for theory-based hypothesis test:  0.00003995373
+	P-Value for theory-based hypothesis test:  0.00003995373
 
 
     
-![svg](output_28_5.svg)
+![svg](images/output_28_5.svg)
     
 
 
