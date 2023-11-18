@@ -25,7 +25,7 @@ $\mu_1$: Mean student performance of well-educated parents’ group.
 
 $\mu_2$: Student performance of less-educated parents’ group. 
 
-The hypothesis test will be conducted at a significance level of $\alpha = 1\%$.
+The hypothesis test will be conducted at a significance level of $\alpha = 1$%.
 
 ### Preliminary Analysis <a id = 'Prelim'>
 This section will involve:
