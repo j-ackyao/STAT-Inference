@@ -343,7 +343,7 @@ $\mu_1$: Mean student (mathematic) performance of well-educated parents’ group
 
 $\mu_2$: Mean student (mathematic) performance of less-educated parents’ group. 
 
-Significance level $\alpha = 1\%$ or $0.01$.
+Significance level $\alpha = 1\$% or $0.01$.
 
 This hypothesis test will be tested with two approaches: [bootstrap-based](#boot) and [asymptotic](#theory). By conducting the same hypothesis test through different methods, obtaining consistent results from both indicates that the results are likely reliable in terms of code and testing process.
 
